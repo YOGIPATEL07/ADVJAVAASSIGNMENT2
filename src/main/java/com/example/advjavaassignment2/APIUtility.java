@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class APIUtility {
-
+    //RECIEVE THE API
     public static void recieveAPI(String pokemonName) throws IOException, InterruptedException, IOException {
 
         pokemonName = pokemonName.replaceAll(" ", "%20");
