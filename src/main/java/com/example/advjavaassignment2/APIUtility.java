@@ -1,15 +1,15 @@
 package com.example.advjavaassignment2;
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class APIUtility {
     //RECIEVE THE API
-    public static void recieveAPI(String pokemonName) throws IOException, InterruptedException, IOException {
+    public static ResponseApi recieveAPI(String pokemonName) throws IOException, InterruptedException, IOException {
 
         pokemonName = pokemonName.replaceAll(" ", "%20");
 
@@ -19,7 +19,11 @@ public class APIUtility {
         HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(uri)).build();
 
 
-        HttpResponse<Path> httpResponse = client.send(httpRequest, HttpResponse.BodyHandlers
-                                          .ofFile(Paths.get("pokemon.json")));
+        HttpResponse<String> httpResponse = client.send(httpRequest, HttpResponse.BodyHandlers
+                .ofString());
+
+        Gson gson = new Gson();
+        return gson.fromJson(httpResponse.body(), ResponseApi.class);
+
     }
     }
