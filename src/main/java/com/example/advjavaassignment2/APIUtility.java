@@ -8,8 +8,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class APIUtility {
-    //RECIEVE THE API
-    public static ResponseApi recieveAPI(String pokemonName) throws IOException, InterruptedException, IOException {
+    public static ApiResponse recieveAPI(String pokemonName) throws IOException, InterruptedException, IOException {
 
         pokemonName = pokemonName.replaceAll(" ", "%20");
 
@@ -20,10 +19,10 @@ public class APIUtility {
 
 
         HttpResponse<String> httpResponse = client.send(httpRequest, HttpResponse.BodyHandlers
-                .ofString());
+                                                     .ofString());
 
         Gson gson = new Gson();
-        return gson.fromJson(httpResponse.body(), ResponseApi.class);
+        return gson.fromJson(httpResponse.body(), ApiResponse.class);
 
-    }
+     }
     }

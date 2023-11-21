@@ -2,21 +2,61 @@ package com.example.advjavaassignment2;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Pokemon {
-    @SerializedName("Id")
-    private String id;
-    @SerializedName("Name")
-    private String name;
-    @SerializedName("Supertype")
-    private String supertype;
-    @SerializedName("Level")
-    private String level;
-    @SerializedName("Hp")
-    private String hp;
+import java.util.List;
 
-    public String getId(){return id;}
-    public String getName(){return name;}
-    public String getSupertype(){return supertype;}
-    public String getLevel(){return level;}
-    public String getHp(){return hp;}
+public class Pokemon {
+    @SerializedName("id")
+    private String id;
+    @SerializedName("name")
+    private String name;
+    @SerializedName("supertype")
+    private String supertype;
+    @SerializedName("level")
+    private String level;
+    @SerializedName("hp")
+    private String hp;
+    @SerializedName("images")
+    private PokemonImages images;
+    private List<String> types;
+
+    public String getId() {
+        return id;
+    }
+
+    public List<String> getTypes() {
+        return types;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSupertype() {
+        return supertype;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public String getHp() {
+        return hp;
+    }
+    public PokemonImages getImages() {
+        return images;
+    }
+
+    class PokemonImages {
+        @SerializedName("small")
+        private String small;
+
+        public String getSmallImage() {
+            return small;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s-%s",name, types);
+    }
 }
