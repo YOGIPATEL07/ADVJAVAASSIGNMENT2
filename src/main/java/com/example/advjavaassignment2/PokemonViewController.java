@@ -60,12 +60,12 @@ public class PokemonViewController {
                         try {
                             posterImageView.setImage(new Image(symbolUrl));
                         } catch (IllegalArgumentException e) {
-                            posterImageView.setImage(new Image(HelloApplication.class.getResourceAsStream("images/default_poster.png")));
+                            posterImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.png")));
                         }
                         return;
                     }
                 }
-                posterImageView.setImage(new Image(HelloApplication.class.getResourceAsStream("images/default_poster.png")));
+                posterImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.png")));
             } else {
                 selectedVBox.setVisible(false);
             }
@@ -87,6 +87,12 @@ public class PokemonViewController {
             msgLabel.setVisible(true);
             msgLabel.setText("No Pokémon found for the given name.");
         }
+    }
+
+    @FXML
+    void getpokemonDetails(ActionEvent event) throws IOException {
+        Pokemon pokemonSelected = listView.getSelectionModel().getSelectedItem();
+        SceneChanger.changeScenes(event, "info-view.fxml", pokemonSelected.getId());
     }
 }
 

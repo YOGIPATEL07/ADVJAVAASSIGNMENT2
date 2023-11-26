@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
 public class ApiResponse {
-    private int totalData;
+    private String totalCount;
     @SerializedName("data")
     private ArrayList<Pokemon> pokemons;
 
     // Getters
-    public int getTotalData() {
-        return totalData;
+    public String getTotalData() {
+        return totalCount;
     }
 
     public ArrayList<Pokemon> getPokemons() {
