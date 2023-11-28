@@ -90,9 +90,9 @@ public class PokemonViewController {
     }
 
     @FXML
-    void getpokemonDetails(ActionEvent event) throws IOException {
+    void getPokemonDetails(ActionEvent event) throws IOException {
         Pokemon pokemonSelected = listView.getSelectionModel().getSelectedItem();
-        SceneChanger.changeScenes(event, "info-view.fxml", pokemonSelected.getId());
+        SceneChanger.changeScenes(event, "details-view.fxml", pokemonSelected.getId());
     }
 }
 
