@@ -10,16 +10,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1000.0" prefWidth="900.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advjavaassignment2.PokemonViewController">
+<AnchorPane prefHeight="829.0" prefWidth="694.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advjavaassignment2.PokemonViewController">
     <children>
-        <VBox alignment="BOTTOM_CENTER" prefHeight="1000.0" prefWidth="735.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="BOTTOM_CENTER" layoutY="46.0" prefHeight="829.0" prefWidth="698.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
             <children>
-                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <HBox alignment="CENTER_LEFT" prefHeight="76.0" prefWidth="705.0" spacing="10.0">
                     <children>
-                        <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" />
-                        <TextField fx:id="searchTextField" promptText="Enter Movie Title" />
-                        <Button mnemonicParsing="false" onAction="#searchForPokemon" text="Search" />
+                        <TextField fx:id="searchTextField" alignment="CENTER" prefHeight="43.0" prefWidth="240.0" promptText="Enter Pokemon Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font></TextField>
+                        <Button mnemonicParsing="false" onAction="#searchForPokemon" prefHeight="42.0" prefWidth="96.0" text="Search">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Button>
                     </children>
                     <padding>
                         <Insets top="30.0" />
@@ -27,29 +33,30 @@
                 </HBox>
                 <HBox fx:id="resultsBox" alignment="CENTER" spacing="20.0">
                     <children>
-                        <VBox id="titlesListView" fx:id="titlesVBox">
+                        <VBox id="titlesListView" fx:id="titlesVBox" alignment="CENTER" prefHeight="462.0" prefWidth="358.0">
                             <children>
-                                <ListView fx:id="listView" prefHeight="450.0" prefWidth="450.0">
+                                <ListView fx:id="listView" prefHeight="478.0" prefWidth="354.0">
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                     </padding>
                                 </ListView>
-                                <Label fx:id="resultsMsgLabel" text="Label" />
+                                <Label fx:id="resultsMsgLabel" alignment="CENTER" text="Label" />
                             </children>
                         </VBox>
                         <VBox fx:id="selectedVBox" alignment="CENTER">
                             <children>
-                                <ImageView fx:id="posterImageView" fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+                                <ImageView fx:id="posterImageView" fitHeight="426.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
                                 <Button mnemonicParsing="false" onAction="#getPokemonDetails" text="Details &gt;&gt;" />
                             </children>
                         </VBox>
                     </children>
                 </HBox>
-                <Label id="msgLabel" fx:id="msgLabel" text="Label" />
+                <Label id="msgLabel" fx:id="msgLabel" alignment="CENTER" prefHeight="42.0" prefWidth="275.0" text="Label" />
             </children>
             <padding>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
         </VBox>
+            <ProgressBar fx:id="progressBar" layoutY="6.0" prefHeight="0.0" prefWidth="718.0" progress="0.0" />
     </children>
 </AnchorPane>

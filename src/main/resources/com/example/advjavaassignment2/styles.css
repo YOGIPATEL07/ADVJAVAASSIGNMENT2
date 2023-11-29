@@ -1,33 +1,93 @@
 .root {
-    -fx-font: bold italic 20pt "Arial";
+    -fx-font-family: "Comic Sans MS", sans-serif;
+    -fx-background-color: #FFCB05; /* Pikachu Yellow */
     -fx-background-image: url("images/background.png");
     -fx-background-size: cover;
 }
 
-.label {
-    -fx-text-fill: #e0820f;
-    -fx-font: bold 20pt "Forte";
+#titlesListView {
+    -fx-background-color: #3D7DCA; /* Pokéball Blue */
+    -fx-background-radius: 10px;
+    -fx-border-color: #FF0000; /* Pokéball Red */
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-font-size: 25px;
+    -fx-padding: 10px;
 }
 
-#newMsgLabel {
-    -fx-text-fill: #e0820f;
-    -fx-font: bold 20pt "Forte";
-    -fx-background-color: #140d09;
-    -fx-background-radius: 20px;
-    -fx-padding: 10px;
+#msgLabel {
+    -fx-font-size: 30px;
+    -fx-text-fill: #FF0000; /* Pokéball Red */
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: #FFCB05; /* Pikachu Yellow */
+    -fx-background-radius: 5px;
+    -fx-text-fill: #3D7DCA; /* Pokéball Blue */
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+
+}
+
+.label {
+    -fx-text-fill: red;
+    -fx-font-weight: 700;
+    -fx-font-size: 25px;
+    -fx-font: bold 20px "Comic Sans MS";
+
 }
 
 .custom-button {
     -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
     -fx-background-radius: 20px;
+    -fx-background-color: #FFCB05; /* Pikachu Yellow */
+    -fx-text-fill: #3D7DCA; /* Pokéball Blue */
 }
 
-.text-field {
+#progressBar {
+    -fx-accent: #FF0000; /* Pokéball Red */
+}
+
+#newMsgLabel {
+    -fx-text-fill: #FFCB05; /* Pikachu Yellow */
+    -fx-font: bold 20pt "Comic Sans MS";
+    -fx-background-color: #3D7DCA; /* Pokéball Blue */
     -fx-background-radius: 20px;
-}
-
-#newTitlesListView {
     -fx-padding: 10px;
-    -fx-background-color: #140d09;
-    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+}
+
+/* Additional Styles */
+#searchTextField {
+    -fx-background-color: #fff; /* White */
+    -fx-background-radius: 5px;
+    -fx-border-color: #FFCB05; /* Pikachu Yellow */
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+.results-box {
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+    -fx-border-color: #FFCB05; /* Pikachu Yellow */
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-padding: 20px;
+}
+
+.selected-vbox {
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+    -fx-border-color: #FFCB05; /* Pikachu Yellow */
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-padding: 20px;
+}
+
+#posterImageView {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0.0, 0, 1);
+    -fx-background-radius: 10px;
+
 }

@@ -42,7 +42,6 @@ public class DetailsViewController implements PokemonLoader{
         try {
             PokemonDetails pokemon = APIUtility.getpokemonDetails(id);
 
-            // Set the fields
             Evolution.setText(pokemon.getEvolvesFrom());
             HealthPoint.setText(pokemon.getHp());
             Level.setText(pokemon.getLevel());
@@ -63,14 +62,14 @@ public class DetailsViewController implements PokemonLoader{
                 if (imageUrl != null && !imageUrl.isEmpty()) {
                     imageView.setImage(new Image(imageUrl));
                 } else {
-                    imageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.png")));
+                    imageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.jpg")));
                 }
             }
 
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         } catch (IllegalArgumentException e) {
-            imageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.png")));
+            imageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.jpg")));
         }
     }
 

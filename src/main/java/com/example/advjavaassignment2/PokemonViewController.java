@@ -60,12 +60,12 @@ public class PokemonViewController {
                         try {
                             posterImageView.setImage(new Image(symbolUrl));
                         } catch (IllegalArgumentException e) {
-                            posterImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.png")));
+                            posterImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.jpg")));
                         }
                         return;
                     }
                 }
-                posterImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.png")));
+                posterImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.jpg")));
             } else {
                 selectedVBox.setVisible(false);
             }
