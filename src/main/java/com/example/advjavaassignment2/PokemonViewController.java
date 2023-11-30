@@ -19,10 +19,10 @@ public class PokemonViewController {
     private ListView<Pokemon> listView;
 
     @FXML
-    private Label msgLabel;
+    private Label warningLabel;
 
     @FXML
-    private ImageView posterImageView;
+    private ImageView ImageView;
 
     @FXML
     private ProgressBar progressBar;
@@ -31,43 +31,43 @@ public class PokemonViewController {
     private HBox resultsBox;
 
     @FXML
-    private Label resultsMsgLabel;
+    private Label resultsMessage;
 
     @FXML
-    private TextField searchTextField;
+    private TextField searchField;
 
     @FXML
-    private VBox selectedVBox;
+    private VBox ImageVBox;
 
     @FXML
-    private VBox titlesVBox;
+    private VBox titlesBox;
 
     @FXML
     private void initialize()
     {
         progressBar.setVisible(false);
-        selectedVBox.setVisible(false);
-        titlesVBox.setVisible(false);
-        msgLabel.setVisible(false);
+        ImageVBox.setVisible(false);
+        titlesBox.setVisible(false);
+        warningLabel.setVisible(false);
 
         listView.getSelectionModel().selectedItemProperty().addListener((obs, oldValue, pokemonSelected) -> {
             if (pokemonSelected != null) {
-                selectedVBox.setVisible(true);
+                ImageVBox.setVisible(true);
                 Pokemon.PokemonImages images = pokemonSelected.getImages();
                 if (images != null) {
                     String symbolUrl = images.getSmallImage();
                     if (symbolUrl != null && !symbolUrl.isEmpty()) {
                         try {
-                            posterImageView.setImage(new Image(symbolUrl));
+                            ImageView.setImage(new Image(symbolUrl));
                         } catch (IllegalArgumentException e) {
-                            posterImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.jpg")));
+                            ImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.jpg")));
                         }
                         return;
                     }
                 }
-                posterImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.jpg")));
+                ImageView.setImage(new Image(Main.class.getResourceAsStream("images/default_poster.jpg")));
             } else {
-                selectedVBox.setVisible(false);
+                ImageVBox.setVisible(false);
             }
         });
 
@@ -75,19 +75,25 @@ public class PokemonViewController {
 
     @FXML
     private void searchForPokemon(ActionEvent event) throws IOException, InterruptedException {
-        String pokemonName = searchTextField.getText().trim();
+        String pokemonName = searchField.getText().trim();
         ApiResponse apiResponse = APIUtility.recieveAPI(pokemonName);
         if (apiResponse.getPokemons() != null && !apiResponse.getPokemons().isEmpty()) {
-            titlesVBox.setVisible(true);
+            titlesBox.setVisible(true);
+            warningLabel.setVisible(false);
             listView.getItems().clear();
             listView.getItems().addAll(apiResponse.getPokemons());
-            resultsMsgLabel.setText("Showing " + listView.getItems().size() + " of " + apiResponse.getTotalData());
+            resultsMessage.setText("Showing " + listView.getItems().size() + " of " + apiResponse.getTotalData());
         } else {
-            titlesVBox.setVisible(false);
-            msgLabel.setVisible(true);
-            msgLabel.setText("No Pokémon found for the given name.");
+            ImageView.setImage(null);
+            ImageVBox.setVisible(false);
+
+            titlesBox.setVisible(false);
+            warningLabel.setVisible(true);
+            warningLabel.setText("No Pokemon found for the given name.");
         }
     }
+
+
 
     @FXML
     void getPokemonDetails(ActionEvent event) throws IOException {

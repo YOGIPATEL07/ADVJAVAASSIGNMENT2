@@ -34,8 +34,8 @@ public class DetailsViewController implements PokemonLoader{
     private Label nameLabel;
 
     @FXML
-    void backToSearch(ActionEvent event) throws IOException {
-        SceneChanger.changeScenes(event, "find-view.fxml");
+    void backButton(ActionEvent event) throws IOException {
+        SceneChanger.changeScenes(event, "pokemon-view.fxml");
     }
 
     public void loadPokemon(String id) {

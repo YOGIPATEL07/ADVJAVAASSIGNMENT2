@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("find-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("pokemon-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/Logo.png")));
         stage.setTitle("Pokemon!");

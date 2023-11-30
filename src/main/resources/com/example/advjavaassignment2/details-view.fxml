@@ -46,7 +46,7 @@
                 <VBox alignment="CENTER" prefHeight="490.0" prefWidth="290.0" spacing="10.0">
                     <children>
                         <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true" />
-                        <Button alignment="BOTTOM_CENTER" lineSpacing="1.0" mnemonicParsing="false" onAction="#backToSearch" styleClass="back-button" text="Back" />
+                        <Button alignment="BOTTOM_CENTER" lineSpacing="1.0" mnemonicParsing="false" onAction="#backButton" styleClass="back-button" text="Back" />
                     </children>
                 </VBox>
             </children>

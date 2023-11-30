@@ -8,8 +8,9 @@ public class PokemonDetails {
     private String id;
     @SerializedName("name")
     private String name;
-    @SerializedName("supertype")
-    private String supertype;
+
+//    @SerializedName("supertype")
+//    private String supertype;
     @SerializedName("level")
     private String level;
     @SerializedName("hp")
@@ -29,9 +30,9 @@ public class PokemonDetails {
         return name;
     }
 
-    public String getSupertype() {
-        return supertype;
-    }
+//    public String getSupertype() {
+//        return supertype;
+//    }
 
     public String getLevel() {
         return level;
@@ -53,7 +54,6 @@ public class PokemonDetails {
         return types;
     }
 
-    // Nested class for images
     public static class PokemonImages {
         @SerializedName("small")
         private String small;

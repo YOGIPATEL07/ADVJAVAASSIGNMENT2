@@ -1,14 +1,14 @@
 .root {
     -fx-font-family: "Comic Sans MS", sans-serif;
-    -fx-background-color: #FFCB05; /* Pikachu Yellow */
+    -fx-background-color: #FFCB05;
     -fx-background-image: url("images/background.png");
     -fx-background-size: cover;
 }
 
-#titlesListView {
-    -fx-background-color: #3D7DCA; /* Pokéball Blue */
+#titlesView {
+    -fx-background-color: #3D7DCA;
     -fx-background-radius: 10px;
-    -fx-border-color: #FF0000; /* Pokéball Red */
+    -fx-border-color: #FF0000;
     -fx-border-radius: 10px;
     -fx-border-width: 2px;
     -fx-font-size: 25px;
@@ -17,52 +17,49 @@
 
 #msgLabel {
     -fx-font-size: 30px;
-    -fx-text-fill: #FF0000; /* Pokéball Red */
+    -fx-text-fill: #FF0000;
     -fx-font-weight: bold;
 }
 
 .button {
-    -fx-background-color: #FFCB05; /* Pikachu Yellow */
+    -fx-background-color: #FFCB05;
     -fx-background-radius: 5px;
-    -fx-text-fill: #3D7DCA; /* Pokéball Blue */
+    -fx-text-fill: #3D7DCA;
     -fx-font-weight: bold;
     -fx-font-size: 20px;
-
 }
 
 .label {
-    -fx-text-fill: red;
-    -fx-font-weight: 700;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
     -fx-font-size: 25px;
     -fx-font: bold 20px "Comic Sans MS";
-
 }
 
 .custom-button {
     -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
     -fx-background-radius: 20px;
-    -fx-background-color: #FFCB05; /* Pikachu Yellow */
-    -fx-text-fill: #3D7DCA; /* Pokéball Blue */
+    -fx-background-color: #FFCB05;
+    -fx-text-fill: #3D7DCA;
 }
 
 #progressBar {
-    -fx-accent: #FF0000; /* Pokéball Red */
+    -fx-accent: #FF0000;
 }
 
 #newMsgLabel {
-    -fx-text-fill: #FFCB05; /* Pikachu Yellow */
+    -fx-text-fill: #FFCB05;
     -fx-font: bold 20pt "Comic Sans MS";
-    -fx-background-color: #3D7DCA; /* Pokéball Blue */
+    -fx-background-color: #3D7DCA;
     -fx-background-radius: 20px;
     -fx-padding: 10px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
 }
 
-/* Additional Styles */
-#searchTextField {
-    -fx-background-color: #fff; /* White */
+#searchField {
+    -fx-background-color: #fff;
     -fx-background-radius: 5px;
-    -fx-border-color: #FFCB05; /* Pikachu Yellow */
+    -fx-border-color: #FFCB05;
     -fx-border-radius: 5px;
     -fx-border-width: 1px;
     -fx-padding: 5px;
@@ -71,7 +68,7 @@
 .results-box {
     -fx-background-color: #fff;
     -fx-background-radius: 10px;
-    -fx-border-color: #FFCB05; /* Pikachu Yellow */
+    -fx-border-color: #FFCB05;
     -fx-border-radius: 10px;
     -fx-border-width: 2px;
     -fx-padding: 20px;
@@ -80,14 +77,39 @@
 .selected-vbox {
     -fx-background-color: #fff;
     -fx-background-radius: 10px;
-    -fx-border-color: #FFCB05; /* Pikachu Yellow */
+    -fx-border-color: #FFCB05;
     -fx-border-radius: 10px;
     -fx-border-width: 2px;
     -fx-padding: 20px;
 }
 
-#posterImageView {
+#ImageView {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0.0, 0, 1);
     -fx-background-radius: 10px;
+}
 
+#pokemonDetails {
+    -fx-background-color: #F5F5F5;
+    -fx-background-radius: 10px;
+    -fx-border-color: #FFCB05;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-padding: 20px;
+}
+
+#pokemonTitle {
+    -fx-text-fill: #3D7DCA;
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+}
+
+#pokemonInfoLabel {
+    -fx-text-fill: #FF0000;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+#pokemonImage {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0.0, 0, 1);
+    -fx-background-radius: 10px;
 }
