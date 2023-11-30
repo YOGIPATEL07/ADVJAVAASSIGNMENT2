@@ -8,7 +8,6 @@ public class ApiResponse {
     @SerializedName("data")
     private ArrayList<Pokemon> pokemons;
 
-    // Getters
     public String getTotalData() {
         return totalCount;
     }

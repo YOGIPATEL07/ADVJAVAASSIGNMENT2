@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="829.0" prefWidth="694.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advjavaassignment2.DetailsViewController">
+<AnchorPane fx:id="root2" prefHeight="829.0" prefWidth="694.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advjavaassignment2.DetailsViewController">
     <children>
         <HBox alignment="CENTER" layoutX="252.0" prefHeight="491.0" prefWidth="686.0" spacing="10.0" AnchorPane.bottomAnchor="348.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
             <children>

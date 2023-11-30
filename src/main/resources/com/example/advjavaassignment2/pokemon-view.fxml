@@ -8,11 +8,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="772.0" prefWidth="611.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advjavaassignment2.PokemonViewController">
+<AnchorPane prefHeight="768.0" prefWidth="611.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.advjavaassignment2.PokemonViewController">
     <children>
           <Label id="warningLabel" fx:id="warningLabel" alignment="CENTER" layoutY="8.0" prefHeight="34.0" prefWidth="718.0" text="Label" />
         <VBox alignment="BOTTOM_CENTER" layoutX="-4.0" layoutY="50.0" prefHeight="779.0" prefWidth="702.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
@@ -46,8 +47,12 @@
                         </VBox>
                         <VBox fx:id="ImageVBox" alignment="CENTER">
                             <children>
-                                <ImageView fx:id="ImageView" fitHeight="398.0" fitWidth="301.0" pickOnBounds="true" preserveRatio="true" />
-                                <Button mnemonicParsing="false" onAction="#getPokemonDetails" text="Details &gt;&gt;" />
+                                <ImageView fx:id="ImageView" fitHeight="426.0" fitWidth="301.0" pickOnBounds="true" preserveRatio="true" />
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                                      <Button mnemonicParsing="false" onAction="#getPokemonDetails" text="Details &gt;&gt;" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
                             </children>
                         </VBox>
                     </children>
